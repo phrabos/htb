@@ -19,6 +19,19 @@ Working notes, scans, and exploit code for Hack The Box machines.
 - **Lab-specific tools** (a PoC for one CVE, a box's nmap scans, per-box notes)
   **stay inside that lab's directory**.
 
+## Shared tooling
+
+Large third-party toolkits live **outside** this repo and are symlinked into the
+root for convenience. They are git-ignored — never committed.
+
+- **`SecLists/`** — symlink to `../SecLists` (the
+  [danielmiessler/SecLists](https://github.com/danielmiessler/SecLists) clone,
+  ~5 GB). Recreate the link on a new machine with:
+
+  ```sh
+  ln -s ../SecLists SecLists
+  ```
+
 ## Labs
 
 - **`cap/`** — nmap scans for the Cap machine. `cap.*` is the working scan

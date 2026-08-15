@@ -29,3 +29,6 @@ Thumbs.db
 # Local credentials / notes you may not want public
 *.ovpn
 .env
+
+# Shared external tooling (symlinked in, lives outside this repo)
+/SecLists
