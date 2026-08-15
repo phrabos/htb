@@ -1,0 +1,5 @@
+# Nmap 7.991 scan initiated Sat Aug  8 15:05:28 2026 as: nmap -sC -sV -Pn -T4 -v -p- -oA cap 10.129.82.109
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.129.82.109 ()	Status: Up
+Host: 10.129.82.109 ()	Ports: 21/open/tcp//tcpwrapped///, 22/open/tcp//tcpwrapped///, 80/open/tcp//tcpwrapped///	Ignored State: closed (65532)
+# Nmap done at Sat Aug  8 15:07:44 2026 -- 1 IP address (1 host up) scanned in 135.69 seconds

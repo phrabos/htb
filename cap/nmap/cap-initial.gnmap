@@ -1,0 +1,5 @@
+# Nmap 7.991 scan initiated Sat Aug  8 14:34:15 2026 as: nmap -sC -sV -p- -oA nmap/cap -v 10.129.61.66
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.129.61.66 ()	Status: Up
+Host: 10.129.61.66 ()	Ports: 53/filtered/tcp//domain///, 67/filtered/tcp//dhcps///, 6283/filtered/tcp/////, 8361/filtered/tcp/////, 8502/filtered/tcp//ftnmtp///, 8993/filtered/tcp/////, 16177/filtered/tcp/////, 17235/filtered/tcp//ssh-mgmt///, 17329/filtered/tcp/////, 17487/filtered/tcp/////, 61174/filtered/tcp/////, 64257/filtered/tcp/////	Ignored State: closed (65523)
+# Nmap done at Sat Aug  8 14:35:36 2026 -- 1 IP address (1 host up) scanned in 80.62 seconds

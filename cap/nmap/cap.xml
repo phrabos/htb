@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///opt/homebrew/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.991 scan initiated Sat Aug  8 15:05:28 2026 as: nmap -sC -sV -Pn -T4 -v -p- -oA cap 10.129.82.109 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -Pn -T4 -v -p- -oA cap 10.129.82.109" start="1786215928" startstr="Sat Aug  8 15:05:28 2026" version="7.991" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1786215928"/>
+<taskend task="NSE" time="1786215928"/>
+<taskbegin task="NSE" time="1786215928"/>
+<taskend task="NSE" time="1786215928"/>
+<taskbegin task="NSE" time="1786215928"/>
+<taskend task="NSE" time="1786215928"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1786215928"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1786215929"/>
+<taskbegin task="SYN Stealth Scan" time="1786215929"/>
+<taskprogress task="SYN Stealth Scan" time="1786215960" percent="12.46" remaining="218" etc="1786216178"/>
+<taskprogress task="SYN Stealth Scan" time="1786215990" percent="26.58" remaining="158" etc="1786216148"/>
+<taskprogress task="SYN Stealth Scan" time="1786216020" percent="41.47" remaining="121" etc="1786216141"/>
+<taskend task="SYN Stealth Scan" time="1786216047" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1786216047"/>
+<taskend task="Service scan" time="1786216047" extrainfo="3 services on 1 host"/>
+<taskbegin task="NSE" time="1786216047"/>
+<taskend task="NSE" time="1786216062"/>
+<taskbegin task="NSE" time="1786216062"/>
+<taskend task="NSE" time="1786216064"/>
+<taskbegin task="NSE" time="1786216064"/>
+<taskend task="NSE" time="1786216064"/>
+<host starttime="1786215929" endtime="1786216064"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.129.82.109" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="65532">
+<extrareasons reason="reset" count="65532" proto="tcp" ports="1-20,23-79,81-65535"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="tcpwrapped" method="probed" conf="8"/><script id="ssh-hostkey" output="&#xa;  3072 fa:80:a9:b2:ca:3b:88:69:a4:28:9e:39:0d:27:d5:75 (RSA)&#xa;  256 96:d8:f8:e3:e8:f7:71:36:c5:49:d5:9d:b6:a4:c9:0c (ECDSA)&#xa;  256 3f:d0:ff:91:eb:3b:f6:e1:9f:2e:8d:de:b3:de:b2:18 (ED25519)"><table>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">3072</elem>
+<elem key="fingerprint">fa80a9b2ca3b8869a4289e390d27d575</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABgQC2vrva1a+HtV5SnbxxtZSs+D8/EXPL2wiqOUG2ngq9zaPlF6cuLX3P2QYvGfh5bcAIVjIqNUmmc1eSHVxtbmNEQjyJdjZOP4i2IfX/RZUA18dWTfEWlNaoVDGBsc8zunvFk3nkyaynnXmlH7n3BLb1nRNyxtouW+q7VzhA6YK3ziOD6tXT7MMnDU7CfG1PfMqdU297OVP35BODg1gZawthjxMi5i5R1g3nyODudFoWaHu9GZ3D/dSQbMAxsly98L1Wr6YJ6M6xfqDurgOAl9i6TZ4zx93c/h1MO+mKH7EobPR/ZWrFGLeVFZbB6jYEflCty8W8Dwr7HOdF1gULr+Mj+BcykLlzPoEhD7YqjRBm8SHdicPP1huq+/3tN7Q/IOf68NNJDdeq6QuGKh1CKqloT/+QZzZcJRubxULUg8YLGsYUHd1umySv4cHHEXRl7vcZJst78eBqnYUtN3MweQr4ga1kQP4YZK5qUQCTPPmrKMa9NPh1sjHSdS8IwiH12V0=</elem>
+</table>
+<table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">96d8f8e3e8f77136c549d59db6a4c90c</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDqG/RCH23t5Pr9sw6dCqvySMHEjxwCfMzBDypoNIMIa8iKYAe84s/X7vDbA9T/vtGDYzS+fw8I5MAGpX8deeKI=</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">3fd0ff91eb3bf6e19f2e8ddeb3deb218</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIPbLTiQl+6W0EOi8vS+sByUiZdBsuz0v/7zITtSuaTFH</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="tcpwrapped" method="probed" conf="8"/><script id="http-title" output="Security Dashboard"><elem key="title">Security Dashboard</elem>
+</script><script id="http-methods" output="&#xa;  Supported Methods: HEAD OPTIONS GET"><table key="Supported Methods">
+<elem>HEAD</elem>
+<elem>OPTIONS</elem>
+<elem>GET</elem>
+</table>
+</script><script id="http-server-header" output="gunicorn"><elem>gunicorn</elem>
+</script></port>
+</ports>
+<times srtt="89516" rttvar="1016" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1786216064"/>
+<taskend task="NSE" time="1786216064"/>
+<taskbegin task="NSE" time="1786216064"/>
+<taskend task="NSE" time="1786216064"/>
+<taskbegin task="NSE" time="1786216064"/>
+<taskend task="NSE" time="1786216064"/>
+<runstats><finished time="1786216064" timestr="Sat Aug  8 15:07:44 2026" summary="Nmap done at Sat Aug  8 15:07:44 2026; 1 IP address (1 host up) scanned in 135.69 seconds" elapsed="135.69" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

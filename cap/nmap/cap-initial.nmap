@@ -1,0 +1,21 @@
+# Nmap 7.991 scan initiated Sat Aug  8 14:34:15 2026 as: nmap -sC -sV -p- -oA nmap/cap -v 10.129.61.66
+Nmap scan report for 10.129.61.66
+Host is up (0.0050s latency).
+Not shown: 65523 closed tcp ports (conn-refused)
+PORT      STATE    SERVICE  VERSION
+53/tcp    filtered domain
+67/tcp    filtered dhcps
+6283/tcp  filtered unknown
+8361/tcp  filtered unknown
+8502/tcp  filtered ftnmtp
+8993/tcp  filtered unknown
+16177/tcp filtered unknown
+17235/tcp filtered ssh-mgmt
+17329/tcp filtered unknown
+17487/tcp filtered unknown
+61174/tcp filtered unknown
+64257/tcp filtered unknown
+
+Read data files from: /opt/homebrew/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Aug  8 14:35:36 2026 -- 1 IP address (1 host up) scanned in 80.62 seconds
