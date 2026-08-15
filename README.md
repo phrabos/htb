@@ -1,52 +1,46 @@
 # HTB Labs
 
-Working notes, scans, and exploit code for Hack The Box machines.
+My Hack The Box work. Scans, notes, and whatever exploit code I end up writing.
 
-## Layout
+## How it's organized
+
+Each box gets its own folder. Anything I reuse across boxes sits at the repo root.
 
 ```
 .
-├── <lab-name>/         # one directory per HTB machine / lab
-│   ├── nmap/           #   scan output for that box
-│   └── ...             #   lab-specific exploits, notes, loot
-└── <shared tooling>    # tools reused across every lab live at the repo root
+├── <lab-name>/         # one folder per HTB machine
+│   ├── nmap/           #   scans for that box
+│   └── ...             #   exploits, notes, loot for that box
+└── <shared tooling>    # reused across boxes, lives at the root
 ```
 
-### Convention
-
-- **Common tools I always reach for** (shared scripts, helpers, wordlist
-  pointers, a shared Python env, etc.) go in the **repo root**.
-- **Lab-specific tools** (a PoC for one CVE, a box's nmap scans, per-box notes)
-  **stay inside that lab's directory**.
+The rule is simple. If I only need it for one box, it stays in that box's folder. If I reach for it on every box (a helper script, a wordlist, a shared Python env), it goes in the root.
 
 ## Shared tooling
 
-Large third-party toolkits live **outside** this repo and are symlinked into the
-root for convenience. They are git-ignored — never committed.
+Big third-party toolkits don't get committed. They live outside the repo, and I symlink them into the root and git-ignore the link.
 
-- **`SecLists/`** — symlink to `../SecLists` (the
-  [danielmiessler/SecLists](https://github.com/danielmiessler/SecLists) clone,
-  ~5 GB). Recreate the link on a new machine with:
+Right now that's just SecLists:
 
-  ```sh
-  ln -s ../SecLists SecLists
-  ```
+```sh
+ln -s ../SecLists SecLists
+```
+
+It points at the [danielmiessler/SecLists](https://github.com/danielmiessler/SecLists) clone, which is around 5 GB. Run that command to recreate the link on a new machine.
 
 ## Labs
 
-- **`cap/`** — nmap scans for the Cap machine. `cap.*` is the working scan
-  (ports 21/22/80 open); `cap-initial.*` is an earlier all-filtered scan.
-- **`nexus-lab/`** — uv-managed Python project. `cve-exploit.py` is a PoC for
-  CVE-2026-38526 (Krayin CRM RCE), specific to this box.
+**cap/** has the nmap scans for Cap. `cap.*` is the real one, with ports 21, 22, and 80 open. `cap-initial.*` was an earlier run that came back all-filtered. I kept both.
 
-## Python environments
+**nexus-lab/** is a uv Python project. Its `cve-exploit.py` is a proof-of-concept for CVE-2026-38526, a Krayin CRM RCE, and it only matters for that box.
 
-Per-lab Python work uses [uv](https://docs.astral.sh/uv/). Recreate a lab's
-environment from its lockfile:
+## Python
+
+Per-box Python work runs on [uv](https://docs.astral.sh/uv/). To rebuild a box's environment from its lockfile:
 
 ```sh
 cd nexus-lab
 uv sync
 ```
 
-`.venv/` directories are git-ignored and regenerated locally — never committed.
+I don't commit `.venv/`. It's git-ignored and I just rebuild it locally when I need it.
