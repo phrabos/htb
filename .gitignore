@@ -30,5 +30,32 @@ Thumbs.db
 *.ovpn
 .env
 
+# HTB flags (never publish these)
+user.txt
+root.txt
+flag.txt
+*.flag
+
+# Private keys / credentials looted during a box
+id_rsa
+id_rsa*
+id_ecdsa*
+id_ed25519*
+*.pem
+*.ppk
+*.key
+*.kdbx
+*.p12
+*.pfx
+authorized_keys
+known_hosts
+
+# Common loot / credential dumps
+*.hash
+hashes.txt
+creds.txt
+shadow
+passwd.bak
+
 # Shared external tooling (symlinked in, lives outside this repo)
 /SecLists
